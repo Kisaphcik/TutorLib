@@ -1,0 +1,85 @@
+# =========================
+# Python-generated files
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Python test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# uv
+# =========================
+# Keep uv.lock in Git!
+# uv.lock should NOT be ignored
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# React / Node
+# =========================
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+.yarn-cache/
+
+# React / Next / Vite build output
+.next/
+out/
+dist/
+build/
+.vite/
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / editors
+# =========================
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# =========================
+# Misc
+# =========================
+*.tmp
+*.temp
