@@ -1,86 +1,177 @@
-header {
+.header {
+    width: 100%;
+    box-sizing: border-box;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: space-between;
+
+    padding: 10px clamp(12px, 2vw, 24px);
+
     border-bottom: 1px solid #E7E7EF;
 }
+
+/* LOGO */
 
 .logoContainer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: clamp(8px, 1vw, 10px);
+
+    min-width: 0;
 }
 
 .logoIcon {
-    width: 54px;
-    height: 54px;
-    background: linear-gradient(135deg, #827CFF, #4E8BFF);    border-radius: 20px; 
+    flex: 0 0 auto;
+
+    width: clamp(38px, 4vw, 45px);
+    height: clamp(38px, 4vw, 45px);
+
+    background: linear-gradient(135deg, #827CFF, #4E8BFF);
+    border-radius: clamp(12px, 1.2vw, 15px);
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logoText {
-    font-size: 20px;
+.logoIcon img {
+    width: clamp(19px, 2vw, 22px);
+    height: clamp(19px, 2vw, 22px);
+
+    filter: brightness(0) invert(1);
 }
 
-.logoIcon img {
-    width: 22px;
-    height: 22px;
-    filter: brightness(0) invert(1); 
+.logoText {
+    font-size: clamp(17px, 1.5vw, 20px);
+    font-weight: 600;
+
+    white-space: nowrap;
 }
+
+/* NAV */
 
 .nav {
     display: flex;
     align-items: center;
-    gap: 10px;
+
+    gap: clamp(5px, 0.7vw, 8px);
 }
 
+/* SEARCH + NOTIFICATIONS */
+
 .navButton {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  width: 56px;
-  height: 56px;
-  
-  background-color: #ffffff;
-  border: 2px solid #eef0f3; 
-  border-radius: 20px; 
-  cursor: pointer;
-  padding: 0;
-  transition: background-color 0.2s ease;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(38px, 4vw, 45px);
+    height: clamp(38px, 4vw, 45px);
+
+    padding: 0;
+    margin: 0;
+
+    background-color: #ffffff;
+    border: 2px solid #eef0f3;
+    border-radius: clamp(14px, 1.5vw, 20px);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .navButton:hover {
-  background-color: #f7f9fa;
+    background-color: #f7f9fa;
+}
+
+.navButton:active {
+    transform: scale(0.95);
 }
 
 .navButton img {
-  width: 24px;
-  height: 24px;
-  display: block;
+    width: clamp(17px, 1.8vw, 20px);
+    height: clamp(17px, 1.8vw, 20px);
+
+    display: block;
 }
 
-.avatarButton{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  width: 54px;
-  height: 54px;
-  
-  background-color: #635BFF;
-  border: 2px solid #eef0f3; 
-  border-radius: 100px; 
-  cursor: pointer;
-  padding: 0;
+/* NOTIFICATION BADGE */
+
+.badge {
+    position: absolute;
+
+    top: 6px;
+    right: 6px;
+
+    width: 7px;
+    height: 7px;
+
+    background-color: #635BFF;
+
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+/* AVATAR */
+
+.avatarButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: clamp(38px, 4vw, 43px);
+    height: clamp(38px, 4vw, 43px);
+
+    padding: 0;
+    margin: 0;
+
+    background-color: #635BFF;
+
+    border: 2px solid #eef0f3;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.avatarButton:hover {
+    background-color: #554de0;
+}
+
+.avatarButton:active {
+    transform: scale(0.95);
 }
 
 .avatarButton span {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
+    color: #ffffff;
+
+    font-size: clamp(11px, 1.2vw, 12px);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 8px 12px;
+    }
+
+    .logoContainer {
+        gap: 7px;
+    }
+
+    .logoText {
+        font-size: 17px;
+    }
+
+    .nav {
+        gap: 4px;
+    }
 }
