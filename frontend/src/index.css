@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Geist';
+  src: url('../src/assets/fonts/Geist/Geist-VariableFont_wght.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer / Edge */
+  user-select: none;         /* Стандартное свойство */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Geist', sans-serif;
+    background-color: #F7F7FA;
+}
